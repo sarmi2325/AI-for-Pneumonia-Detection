@@ -4,8 +4,12 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.keras.models import load_model
 from utils import preprocess_image, make_gradcam_heatmap, superimpose_heatmap
+from custom_layers import MyCustomLayer
 
-model = load_model("pneumonia_model.keras")
+model = load_model("pneumonia_model.keras", custom_objects={
+    "MyCustomLayer": MyCustomLayer,
+
+})
 
 class_names = ['NORMAL', 'PNEUMONIA']  
 
