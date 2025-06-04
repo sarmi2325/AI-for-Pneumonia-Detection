@@ -3,6 +3,7 @@ from PIL import Image
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras.models import load_model
+from tensorflow.keras.applications import EfficientNetB0
 from utils import preprocess_image, make_gradcam_heatmap, superimpose_heatmap
 
 
