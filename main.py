@@ -7,7 +7,7 @@ from tensorflow.keras.applications import EfficientNetB0
 from utils import preprocess_image, make_gradcam_heatmap, superimpose_heatmap
 
 
-model = load_model("pneumonia_model.keras", custom_objects={'EfficientNetB0': EfficientNetB0})
+model = load_model("pneumonia_model.keras", custom_objects={'EfficientNetB0': EfficientNetB0},compile=False)
 
 class_names = ['NORMAL', 'PNEUMONIA']  
 
